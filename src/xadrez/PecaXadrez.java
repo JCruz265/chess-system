@@ -5,15 +5,15 @@ import tabuleiro.Tabuleiro;
 
 public class PecaXadrez extends Peca {
     //declarando atributos não herdados
-    private Color color;
+    private Cor color;
 
-    public PecaXadrez(Tabuleiro xadrez, Color color) {
+    public PecaXadrez(Tabuleiro xadrez, Cor cor) {
         super(xadrez);
-        this.color = color;
+        this.color = cor;
     }//construtor com atributos herdados e não herdados
-    //metodo para acessar atributos
 
-    public Color getColor() {
+    //metodo para acessar atributos
+    public Cor getColor() {
         return color;
-    }
+    }//fim do metodo getter
 }

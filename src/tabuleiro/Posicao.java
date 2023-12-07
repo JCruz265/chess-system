@@ -28,5 +28,5 @@ public class Posicao {
     @Override
     public String toString(){
         return linha+ ", "+ coluna;
-    }
+    }//fim do metodo que informa a posição
 }

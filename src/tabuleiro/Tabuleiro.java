@@ -9,6 +9,7 @@ public class Tabuleiro {
     public Tabuleiro(int linhas, int colunas) {
         this.linhas = linhas;
         this.colunas = colunas;
+        //instanciando a matriz peças
         pecas = new Peca[linhas][colunas];
     }//construtor com argumentos
 
@@ -20,8 +21,8 @@ public class Tabuleiro {
     public void setColunas(int colunas) {
         this.colunas = colunas;
     }//fim dos metodos setter's
-    //metodos para acessar atributos
 
+    //metodos para acessar atributos
     public int getLinhas() {
         return linhas;
     }
@@ -30,12 +31,17 @@ public class Tabuleiro {
         return colunas;
     }//fim dos metodos getter's
 
-    //metodo para retornar uma peça atraves posição/matriz
+    //metodo para retornar uma peça atraves posição
     public Peca peca(int linha, int coluna) {
         return pecas[linha][coluna];
     }//fim do metodo peça
+
     //sobrecarga do metodo peca
     public Peca peca(Posicao posicao) {
         return pecas[posicao.getLinha()][posicao.getColuna()];
-    }//fim da sobrecarga do metodo peca
+    }//fim da sobrecarga do metodo peça
+    public void lugarPeca(Peca peca, Posicao posicao){
+        pecas[posicao.getLinha()][posicao.getColuna()] = peca;
+        peca.posicao = posicao;
+    }
 }
