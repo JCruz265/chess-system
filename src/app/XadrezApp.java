@@ -1,10 +1,10 @@
 package app;
 
-import tabuleiro.Posicao;
+import xadrez.PartidaXadrez;
 
 public class XadrezApp {
     public static void main(String[] args) {
-        Posicao pos = new Posicao(3,5);
-        System.out.println(pos);
+        PartidaXadrez partidaXadrez = new PartidaXadrez();
+        UI.plotarTabuleiro(partidaXadrez.getPecas());
     }
 }

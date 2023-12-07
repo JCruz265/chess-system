@@ -1,6 +1,7 @@
 package tabuleiro;
 
 public class Posicao {
+    //declarando atributos
     private int linha;
     private int coluna;
 
