@@ -26,5 +26,6 @@ public class PartidaXadrez {
     private void configInicial(){
         tabuleiro.lugarPeca(new Torre(tabuleiro, Cor.BRANCO), new Posicao(2,1));
         tabuleiro.lugarPeca(new Rei(tabuleiro, Cor.PRETO), new Posicao(0,4));
+        tabuleiro.lugarPeca(new Rei(tabuleiro, Cor.BRANCO), new Posicao(7,4));
     }
 }
