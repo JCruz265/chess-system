@@ -40,11 +40,23 @@ public class Tabuleiro {
         }
         return pecas[posicao.getLinha()][posicao.getColuna()];
     }//fim da sobrecarga do metodo peça
-    public void lugarPeca(Peca peca, Posicao posicao){
+    public void colocarPeca(Peca peca, Posicao posicao){
         if(haPeca(posicao)){
-            throw new TabuleiroException("já há uma peça na posição "+ posicao);      }
+            throw new TabuleiroException("Já há uma peça na posição "+ posicao);      }
         pecas[posicao.getLinha()][posicao.getColuna()] = peca;
         peca.posicao = posicao;
+    }
+    public Peca removerPeca(Posicao posicao){
+        if (!existePosicao(posicao)) {
+            throw new TabuleiroException("Está posição não existe no tabuleiro");
+        }
+        if (peca(posicao) == null){
+            return null;
+        }
+        Peca auxiliar = peca(posicao);
+        auxiliar.posicao = null;
+        pecas[posicao.getLinha()][posicao.getColuna()]= null;
+        return auxiliar;
     }
     private boolean existePosicao(int linha, int coluna){
         return linha >= 0 && linha < linhas && coluna >= 0 && coluna < colunas;
@@ -58,4 +70,5 @@ public class Tabuleiro {
         }
        return peca(posicao) != null;
     }
+
 }
