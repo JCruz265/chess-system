@@ -29,6 +29,10 @@ public class UI {
     public static final String ANSI_ROXO_FUNDO = "\u001B[45m";
     public static final String ANSI_CIANO_FUNDO = "\u001B[46m";
     public static final String ANSI_BRANCO_FUNDO = "\u001B[47m";
+    public static void limparTela(){
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
 
     public static PosicaoXadrez lerPosicaoXadrez(Scanner sc){
         try {
